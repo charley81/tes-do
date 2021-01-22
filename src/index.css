@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,200&display=swap');
 
+:root {
+  --colorPrimary: #007090;
+  --colorRed: #ff220c;
+  --colorGreen: #4c956c;
+  --colorLight: #fbfaf8;
+  --colorDark: #1d1e18;
+  --colorMid: #c7ccdb;
+  --borderRadius: 3px;
+  --transition: all 0.3s ease;
+  --maxWidth: 700px;
+  --fontFamily: 'Work Sans', sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +20,43 @@
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--fontFamily);
+  line-height: 1.5;
+  letter-spacing: 2px;
 }
 
 .success {
-  color: green;
+  color: var(--colorGreen);
 }
 
 .danger {
-  color: red;
+  color: var(--colorRed);
 }
+
+.container {
+  max-width: var(--maxWidth);
+  margin: auto;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--fontFamily);
+}
+
+.list-container {
+  margin: 5vh;
+}
+
+/* title */
+.title {
+  color: var(--colorPrimary);
+  border-bottom: 1px solid var(--colorDark);
+}
+
+/* list */
