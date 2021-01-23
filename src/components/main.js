@@ -4,12 +4,15 @@ import List from './list'
 const Main = ({ handleSubmit, clearItems, editing, todo, setTodo, items }) => {
   return (
     <section className="main-content">
-      <div className="list-container">
-        <List items={items} />
-        <button className="btn" onClick={clearItems}>
-          clear
-        </button>
-      </div>
+      {items.length > 0 && (
+        <div className="list-container">
+          <List items={items} />
+          <button className="btn" onClick={clearItems}>
+            clear
+          </button>
+        </div>
+      )}
+
       <form className="list-form" onSubmit={handleSubmit}>
         <div className="input-container">
           <input

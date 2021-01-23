@@ -7,13 +7,13 @@ const List = ({ items }) => {
       {items.map(item => {
         const { id, title } = item
         return (
-          <div className="list-item">
+          <div className="list-item" key={id}>
             <p key={id}>{title}</p>
             <div className="btn-container">
-              <button>
+              <button className="icon edit-btn">
                 <AiFillEdit />
               </button>
-              <button>
+              <button className="icon delete-btn">
                 <AiFillDelete />
               </button>
             </div>

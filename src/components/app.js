@@ -19,6 +19,7 @@ function App() {
 
     if (!todo) {
       // set alert
+      handleAlert(true, 'danger', 'enter something!')
     } else if (todo && editing) {
       // handle edit
     } else {
@@ -30,6 +31,11 @@ function App() {
     }
   }
 
+  const handleAlert = (show = false, type = '', text = '') => {
+    console.log('show alert')
+    setAlert({ show, type, text })
+  }
+
   const clearItems = () => {
     setList([])
   }
@@ -37,7 +43,7 @@ function App() {
   return (
     <div className="container">
       <Title />
-      {alert.show && <Alert />}
+      {alert.show && <Alert {...alert} />}
       <Main
         handleSubmit={handleSubmit}
         clearItems={clearItems}

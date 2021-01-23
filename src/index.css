@@ -25,11 +25,12 @@ body {
   letter-spacing: 2px;
 }
 
-.success {
+/* alert */
+.alert-success {
   color: var(--colorGreen);
 }
 
-.danger {
+.alert-danger {
   color: var(--colorRed);
 }
 
@@ -61,13 +62,10 @@ body {
 }
 
 /* main content */
-.main-content {
-  margin-top: 10vh;
-}
 
 /* form */
-.input-container {
-  text-align: center;
+.list-form {
+  margin: 4rem 0;
 }
 
 .input-container input {
@@ -83,7 +81,23 @@ body {
 }
 
 /* list */
+.list {
+  text-align: left;
+}
+
 .list-item {
   display: flex;
   justify-content: space-between;
+}
+
+.list-item .icon {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: var(--colorPrimary);
 }
