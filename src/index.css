@@ -74,10 +74,12 @@ body {
   width: 100%;
   font-family: var(--fontFamily);
   color: var(--colorDark);
+  padding: 1rem;
 }
 
 .input-container button {
   color: var(--colorGreen);
+  margin-top: 1rem;
 }
 
 /* list */

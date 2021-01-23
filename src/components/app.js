@@ -28,6 +28,7 @@ function App() {
       setList([...list, newItem])
       setTodo('')
       // show alert
+      handleAlert(true, 'success', 'item added')
     }
   }
 
@@ -43,7 +44,7 @@ function App() {
   return (
     <div className="container">
       <Title />
-      {alert.show && <Alert {...alert} />}
+      {alert.show && <Alert {...alert} removeAlert={handleAlert} />}
       <Main
         handleSubmit={handleSubmit}
         clearItems={clearItems}
