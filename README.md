@@ -1,3 +1,3 @@
-# myDo_V1
+# tes-do
 
 > fisher price my first todo app
