@@ -1,9 +1,25 @@
 import React from 'react'
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
-const List = () => {
+const List = ({ items }) => {
   return (
     <div className="list">
-      <p>list component</p>
+      {items.map(item => {
+        const { id, title } = item
+        return (
+          <div className="list-item">
+            <p key={id}>{title}</p>
+            <div className="btn-container">
+              <button>
+                <AiFillEdit />
+              </button>
+              <button>
+                <AiFillDelete />
+              </button>
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }

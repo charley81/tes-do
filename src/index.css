@@ -47,6 +47,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
   font-family: var(--fontFamily);
+  font-size: 1.3rem;
 }
 
 .list-container {
@@ -59,4 +60,30 @@ body {
   border-bottom: 1px solid var(--colorDark);
 }
 
+/* main content */
+.main-content {
+  margin-top: 10vh;
+}
+
+/* form */
+.input-container {
+  text-align: center;
+}
+
+.input-container input {
+  border: none;
+  border-bottom: 1px dotted var(--colorMid);
+  width: 100%;
+  font-family: var(--fontFamily);
+  color: var(--colorDark);
+}
+
+.input-container button {
+  color: var(--colorGreen);
+}
+
 /* list */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+}
