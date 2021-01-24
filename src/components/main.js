@@ -1,12 +1,21 @@
 import React from 'react'
 import List from './list'
 
-const Main = ({ handleSubmit, clearItems, editing, todo, setTodo, items }) => {
+const Main = ({
+  handleSubmit,
+  clearItems,
+  editing,
+  todo,
+  setTodo,
+  items,
+  removeItem,
+  editItem,
+}) => {
   return (
     <section className="main-content">
       {items.length > 0 && (
         <div className="list-container">
-          <List items={items} />
+          <List items={items} removeItem={removeItem} editItem={editItem} />
           <button className="btn" onClick={clearItems}>
             clear
           </button>
